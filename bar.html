@@ -1,51 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-  <!-- SEO & Metadata -->
-  <meta name="description" content="Anaki Bar - Premier destination for cocktails and entertainment in the heart of Pokhara" />
-  <meta name="author" content="Anaki Bar" />
-  <meta name="robots" content="index, follow">
-  <title>Anaki Bar | Bar Menu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar Menu | Anaki Bar</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="img/logo.webp">
+  <link rel="icon" type="image/x-icon" href="img/logo.webp" />
 
-  <!-- Open Graph / Facebook Meta -->
-  <meta property="og:title" content="Anaki Bar" />
-  <meta property="og:description" content="Anaki Bar - Premier destination for cocktails and entertainment in the heart of Pokhara" />
-  <meta property="og:image" content="https://anakibar.com.np/img/13.webp" />
-  <meta property="og:url" content="https://anakibar.com.np/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Anaki Bar" />
-
-  <!-- Twitter Card Meta -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@anakibar">
-  <meta name="twitter:title" content="Anaki Bar">
-  <meta name="twitter:description" content="Anaki Bar - Premier destination for cocktails and entertainment in the heart of Pokhara">
-  <meta name="twitter:image" content="https://anakibar.com.np/img/13.webp">
-
-  <!-- Font Awesome -->
+  <!-- Font Awesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- AOS Animation -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-
-  <!-- Custom Styles -->
   <style>
     :root {
-      --primary: #9A031E;
+      --primary: #ffa551;
       --secondary: #FB8B24;
       --dark: #0F0E0E;
       --light: #F8F9FA;
@@ -55,45 +29,8 @@
     body {
       font-family: 'Poppins', sans-serif;
       color: #212529;
-      background-color: #FAFAFA;
+      background-color: #fafafa;
       overflow-x: hidden;
-    }
-
-    html,
-    body {
-      overflow-x: hidden;
-      width: 100%;
-    }
-
-    .menu-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 40px;
-    }
-
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .menu-image {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .menu-image:hover {
-      transform: scale(1.02);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     /* Navbar */
@@ -105,15 +42,14 @@
 
     .navbar-brand {
       width: 100px;
-      color: var(--light);
     }
 
-    .navbar-brand span {
-      color: var(--secondary);
+    .navbar-brand img {
+      max-width: 100%;
     }
 
     .navbar-nav .nav-link {
-      color: var(--light);
+      color: var(--light) !important;
       font-weight: 500;
       position: relative;
     }
@@ -147,24 +83,47 @@
     .dropdown-menu {
       background-color: var(--dark);
       border: 1px solid rgba(255,255,255,0.1);
-      min-width: 200px;
     }
     
     .dropdown-item {
       color: var(--light) !important;
-      padding: 0.5rem 1.5rem;
-      transition: all 0.3s ease;
     }
     
-    .dropdown-item:hover, .dropdown-item:focus {
+    .dropdown-item:hover {
       background-color: var(--primary);
       color: white !important;
     }
 
-    /* Active dropdown item */
-    .dropdown-item.active {
-      background-color: var(--secondary);
-      color: var(--dark) !important;
+    /* Menu Container */
+    .menu-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-image:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
   </style>
 </head>
@@ -197,7 +156,7 @@
               Menu
             </a>
             <ul class="dropdown-menu" aria-labelledby="menuDropdown">
-              <li><a class="dropdown-item active" href="bar.html">Bar Menu</a></li>
+              <li><a class="dropdown-item " href="bar.html">Bar Menu</a></li>
               <li><a class="dropdown-item" href="food.html">Food Menu</a></li>
             </ul>
           </li>
