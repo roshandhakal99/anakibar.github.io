@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Menu | Anaki Bar</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/logo.webp" />
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #9A031E;
+      --secondary: #FB8B24;
+      --dark: #0F0E0E;
+      --light: #F8F9FA;
+      --accent: #E36414;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #212529;
+      background-color: #fafafa;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(15, 14, 14, 0.95);
+      padding: 1rem 0;
+      transition: all 0.3s;
+    }
+
+    .navbar-brand {
+      width: 100px;
+    }
+
+    .navbar-brand img {
+      max-width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+      color: var(--light) !important;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .navbar-toggler {
+      border: none;
+      background: transparent;
+    }
+
+    /* Menu Container */
+    .menu-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-image:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/navbar-logo.svg" alt="Anaki Bar Logo" class="img-fluid" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+              <li><a class="dropdown-item" href="bar.html">Bar Menu</a></li>
+              <li><a class="dropdown-item" href="food.html">Food Menu</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Food Menu Content -->
+  <div class="menu-container">
+    <h1>Our Food Menu</h1>
+    <div class="menu-grid">
+      <img src="img/food-cover.jpg" alt="Food Menu Cover" class="menu-image" loading="lazy">
+      <img src="img/8.jpg" alt="Starters" class="menu-image" loading="lazy">
+      <img src="img/9.jpg" alt="Main Courses" class="menu-image" loading="lazy">
+      <img src="img/10.jpg" alt="Pastas & Bowls" class="menu-image" loading="lazy">
+      <img src="img/22.jpg" alt="Desserts" class="menu-image" loading="lazy">
+      <img src="img/11.jpg" alt="Drinks & Sides" class="menu-image" loading="lazy">
+      <img src="img/pasta.jpg" alt="Pasta Section" class="menu-image" loading="lazy">
+      <img src="img/12.jpg" alt="Specials" class="menu-image" loading="lazy">
+      <img src="img/13.jpg" alt="Chef's Recommendations" class="menu-image" loading="lazy">
+      <img src="img/bowls.jpg" alt="Bowl Selection" class="menu-image" loading="lazy">
+      <img src="img/14.jpg" alt="Seasonal Dishes" class="menu-image" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Optional: Smooth scroll on hash load -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,465 +1,1101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Anaki Bar</title>
-        <link rel="icon" type="image/x-icon" href="./assets/img/logo.webp">
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="./index.css" rel="stylesheet">
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="./img/navbar-logo.svg" alt="..." /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                       
-                        <li class="nav-item"><a class="nav-link" href="#about">Timeline</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Events</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Welcome To Our Restro!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="https://wa.me/+9779856076324" style="background-color: rgb(111, 172, 8);"> For Table Reservation</a>
-            </div>
-        </header>
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Timeline</h2>
-                    <h3 class="section-subheading text-muted">Anaki Bar is a premier destination for cocktails and entertainment. Located in the heart of the city,<br> we offer a sophisticated atmosphere and a wide range of drinks to satisfy every palate.</h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="./img/10.webp" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2023</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted"></p></div>
-                        </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    
+    <!-- Basic SEO Meta -->
+    <meta name="description" content="Anaki Bar - Premier destination for cocktails and entertainment in the heart of Pokhara" />
+    <meta name="author" content="Anaki Bar" />
+    <meta name="robots" content="index, follow">
+    <title>Anaki Bar | Premier destination for cocktails and entertainment in the heart of Pokhara</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.webp">
+
+    <!-- Open Graph / Facebook Meta -->
+    <meta property="og:title" content="Anaki Bar" />
+    <meta property="og:description" content="Anaki Bar - Premier destination for cocktails and entertainment in the heart of Pokhara" />
+    <meta property="og:image" content="https://anakibar.com.np/img/13.webp" />
+    <meta property="og:url" content="https://anakibar.com.np/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Anaki Bar" />
+
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@anakibar"> <!-- Replace with your Twitter handle -->
+    <meta name="twitter:title" content="Anaki Bar">
+    <meta name="twitter:description" content="Anaki Bar - Premier destination for cocktails and entertainment in the heart of Pokhara">
+    <meta name="twitter:image" content="https://anakibar.com.np/img/13.webp">
+    <meta name="twitter:creator" content="@yourhandle"> <!-- Optional -->
+
+    <!-- Font Awesome icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #9A031E;
+            --secondary: #FB8B24;
+            --dark: #0F0E0E;
+            --light: #F8F9FA;
+            --accent: #E36414;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #212529;
+            background-color: #FAFAFA;
+            overflow-x: hidden;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Ensure full-width sections don't cause overflow */
+        .hero,
+        .contact,
+        footer,
+        section {
+            margin-left: calc(-50vw + 50%);
+            width: 100vw;
+        }
+
+        /* Optional: prevent any element from overflowing horizontally */
+        * {
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: rgba(15, 14, 14, 0.95);
+            padding: 1rem 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-scrolled {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            background-color: rgba(15, 14, 14, 0.98);
+        }
+
+        .navbar-brand {
+            width: 100px;
+            color: var(--light);
+        }
+
+        .navbar-brand span {
+            color: var(--secondary);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--light);
+            font-weight: 500;
+            padding: 0.75rem 1rem;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:active {
+            color: var(--light) !important;
+
+        }
+
+        .nav-link.active, .navbar-nav .nav-link.show {
+    color:var(--light) !important;
+}
+        .navbar-nav .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--secondary);
+        }
+
+        .navbar-toggler {
+            border: none;
+            background: transparent;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--light);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .btn-reservation {
+            background-color: var(--secondary);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            border: 2px solid var(--secondary);
+            transition: all 0.3s;
+        }
+
+        .btn-reservation:hover {
+            background-color: transparent;
+            color: var(--light);
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-heading {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .section-subheading {
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: #6c757d;
+        }
+
+        /* About/Timeline Section */
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+
+        .timeline:before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            margin-left: -1px;
+            content: '';
+            background-color: #e9ecef;
+        }
+
+        .timeline>li {
+            position: relative;
+            margin-bottom: 50px;
+            min-height: 50px;
+        }
+
+        .timeline>li:after,
+        .timeline>li:before {
+            display: table;
+            content: ' ';
+        }
+
+        .timeline>li:after {
+            clear: both;
+        }
+
+        .timeline>li .timeline-panel {
+            position: relative;
+            float: left;
+            width: 41%;
+            padding: 0 20px 20px 30px;
+            text-align: right;
+        }
+
+        .timeline>li.timeline-inverted>.timeline-panel {
+            float: right;
+            padding: 0 30px 20px 20px;
+            text-align: left;
+        }
+
+        .timeline>li>.timeline-image {
+            position: absolute;
+            z-index: 100;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            text-align: center;
+            color: white;
+            border: 7px solid #e9ecef;
+            border-radius: 100%;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .timeline>li>.timeline-image h4 {
+            font-size: 1rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .timeline>li>.timeline-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .timeline .timeline-heading h4 {
+            margin-top: 0;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .timeline .timeline-heading h4.subheading {
+            margin-top: 5px;
+            text-transform: none;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .timeline .timeline-body>p {
+            margin-bottom: 0;
+        }
+
+        /* Events Section */
+        .event-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            height: 100%;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .event-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .event-card .card-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-card .card-subtitle {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--light);
+        }
+
+        .service-box {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-box h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/1.webp');
+            background-position: center;
+            background-size: cover;
+            color: var(--light);
+        }
+
+        .contact .section-heading:after {
+            background: var(--light);
+        }
+
+        .contact-info i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--secondary);
+        }
+
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            padding: 2rem 0;
+            color: var(--light);
+        }
+
+        .footer a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: var(--secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: rgba(15, 14, 14, 0.95);
+                padding: 1rem;
+                border-radius: 5px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-heading {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .timeline:before {
+                left: 40px;
+            }
+
+            .timeline>li .timeline-panel {
+                width: calc(100% - 90px);
+                width: -moz-calc(100% - 90px);
+                width: -webkit-calc(100% - 90px);
+                float: right;
+                text-align: left;
+                padding: 0 20px 0 100px;
+            }
+
+            .timeline>li .timeline-image {
+                left: 0;
+                margin-left: 0;
+                width: 80px;
+                height: 80px;
+            }
+
+            .timeline>li.timeline-inverted>.timeline-panel {
+                padding: 0 20px 0 100px;
+                text-align: left;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .timeline>li .timeline-panel {
+
+                float: right;
+                text-align: left;
+                padding: 0 20px 0 20px;
+            }
+
+            .timeline>li.timeline-inverted>.timeline-panel {
+                padding: 0 20px 0 20px;
+                text-align: left;
+            }
+        }
+
+        /* Back to Top Button Styles */
+        #backToTopBtn {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            width: 44px;
+            height: 44px;
+            background-color: #fb8b24;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            line-height: 44px;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <button id="backToTopBtn" title="Go to top">↑</button>
+
+    <nav class="navbar navbar-expand-lg sticky-top top-0" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand " href="#page-top">
+                <img src="img/navbar-logo.svg" alt="main logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="./img/11.webp" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>December 23,2023</h4>
-                                <h4 class="subheading">PRE OPENING CEREMONY </h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Soft-opening of Anaki bar on 23rd December.</p></div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
                     </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="./img/12.webp" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>January 1,2024</h4>
-                                <h4 class="subheading">NEW YEAR 2024</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Celebration of New year 2024</p></div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="./img/13.webp" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Till Now</h4>
-                                <h4 class="subheading">Many events has been successfully organized</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted"></p></div>
-                        </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                            <li><a class="dropdown-item" href="bar.html">Bar Menu</a></li>
+                            <li><a class="dropdown-item" href="food.html">Food Menu</a></li>
+                        </ul>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
-        </section>
-       
-        <section class="page-section bg-light" id="portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Events</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                     <div class="portfolio-hover-content"></div>
-                                </div>
-                                <a href="./internal/OK.HTML"><img class="img-fluid" src="./img/6.webp" alt="..." /></a>
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">UPCOMING EVENTS </div>
-                                <div class="portfolio-caption-subheading text-muted">& MORE</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="./img/1.webp" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">EKDEV LIMBU</div>
-                                <div class="portfolio-caption-subheading text-muted">"Singer"</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="./img/2.webp" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Creator meetup</div>
-                                <div class="portfolio-caption-subheading text-muted">"INFLUENCER"</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="./img/3.webp" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">OSHIN KARKI</div>
-                                <div class="portfolio-caption-subheading text-muted">"singer"</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="./img/4.webp" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">ELI GURUNG</div>
-                                <div class="portfolio-caption-subheading text-muted">"DJ"</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="./img/5.webp" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">ROSELYN SHRESTHA</div>
-                                <div class="portfolio-caption-subheading text-muted">"singer"</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">We provide best services to our customers.</h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fas fa-cocktail fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Drinks</h4>
-                        <p class="text-muted">Choose from our extensive selection of cocktails expertly crafted by our mixologists.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-music fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Live Music</h4>
-                        <p class="text-muted">Enjoy live music performances and DJ sets every weekend for a memorable night out.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-user-friends fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Lounge Area</h4>
-                        <p class="text-muted">Relax and unwind in our stylish lounge area with comfortable seating and ambient lighting.</p>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-parking fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Parking</h4>
-                        <p class="text-muted">Private parking available.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fab fa-amazon-pay fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Online payment </h4>
-                        <p class="text-muted">We accept both cash and online payment.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-concierge-bell fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Food</h4>
-                        <p class="text-muted">Feel the best taste of our food.</p>
-                    </div>
+        </div>
+    </nav>
 
-                </div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1>Welcome to Anaki Bar</h1>
+                <p>A premier destination for cocktails and entertainment in the heart of Pokhara</p>
+                <a href="https://wa.me/+9779856076324" class="btn btn-reservation">Reserve a Table</a>
             </div>
-        </section>
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact</h2><br>
-                    <h3 class="section-subheading" style="color: white;"><i class="fas fa-location-arrow fa-2x"></i> Lakeside-6, Pokhara
-                  <br><br> <i class="fas fa-phone-alt fa-2x"></i>  +977 9856076324
-                    <br><br><i class="fas fa-mail-bulk fa-2x"></i>  anakirestaurant@gmail.com</h3>
+        </div>
+    </section>
 
-                    <h3 class="section-subheading text-muted">For inquiries, reservations, or feedback, feel free to contact us:</h3>
-                </div>
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start" style="color: azure;">Copyright &copy;ANAKI 2023</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/anaki_bar/" aria-label="Twitter"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/anakirestaurant" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.google.com/maps/dir/?api=1&destination=28.212963703%2C83.95720851" aria-label="map"><i class="fas fa-directions"></i></a>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-heading">Our Story</h2>
+                <p class="section-subheading">Anaki Bar is a premier destination for cocktails and entertainment.
+                    Located in the heart of Pokhara, we offer a sophisticated atmosphere and a wide range of drinks to
+                    satisfy every palate.</p>
+            </div>
+            <ul class="timeline">
+                <li data-aos="fade-right">
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="./img/10.webp" alt="Anaki Bar Beginnings">
                     </div>
-                    <div class="col-lg-4 text-lg-end" >
-                        <a class="link-dark text-decoration-none me-3" href="#!"style="color: azure;">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use  </a>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2023</h4>
+                            <h4 class="subheading">Our Humble Beginnings</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Anaki Bar was founded with a vision to create an exceptional dining
+                                and entertainment experience in Pokhara.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted" data-aos="fade-left">
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="./img/11.webp" alt="Pre-opening Ceremony">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>December 23, 2023</h4>
+                            <h4 class="subheading">Pre-Opening Ceremony</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">We celebrated the soft-opening of Anaki Bar with friends, family, and
+                                local figures.</p>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="./img/12.webp" alt="New Year 2024">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>January 1, 2024</h4>
+                            <h4 class="subheading">New Year 2024</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Our first major event was a spectacular New Year's celebration that
+                                set the tone for our future.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted" data-aos="fade-left">
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="./img/13.webp" alt="Present Day">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Till Now</h4>
+                            <h4 class="subheading">Many Events Successfully Organized</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">We've hosted numerous successful events featuring renowned artists and
+                                created unforgettable experiences for our guests.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted" data-aos="zoom-in">
+                    <div class="timeline-image">
+                        <h4>Be Part<br>Of Our<br>Story!</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <!-- Events Section -->
+    <section class="events bg-light" id="events">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-heading">Our Events</h2>
+                <p class="section-subheading">Experience unforgettable nights with amazing performances and special
+                    events</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card">
+                        <img src="./img/6.webp" class="card-img-top event-img" alt="Upcoming Events">
+                        <div class="card-body">
+                            <h5 class="card-title">UPCOMING EVENTS</h5>
+                            <h6 class="card-subtitle">&amp; MORE</h6>
+                            <p class="card-text">Stay tuned for our exciting upcoming events featuring top artists and
+                                special promotions.</p>
+                            <a href="./internal/OK.HTML" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card">
+                        <img src="./img/1.webp" class="card-img-top event-img" alt="Ekdev Limbu">
+                        <div class="card-body">
+                            <h5 class="card-title">EKDEV LIMBU</h5>
+                            <h6 class="card-subtitle">Singer</h6>
+                            <p class="card-text">Enjoy the soulful voice of Ekdev Limbu in an intimate live performance
+                                setting.</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#portfolioModal1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="event-card">
+                        <img src="./img/2.webp" class="card-img-top event-img" alt="Creator Meetup">
+                        <div class="card-body">
+                            <h5 class="card-title">CREATOR MEETUP</h5>
+                            <h6 class="card-subtitle">Influencers</h6>
+                            <p class="card-text">Join us for an exciting meetup with popular social media creators and
+                                influencers.</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#portfolioModal2">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="event-card">
+                        <img src="./img/3.webp" class="card-img-top event-img" alt="Oshin Karki">
+                        <div class="card-body">
+                            <h5 class="card-title">OSHIN KARKI</h5>
+                            <h6 class="card-subtitle">Singer</h6>
+                            <p class="card-text">Experience the melodious voice of Oshin Karki in a captivating live
+                                performance.</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#portfolioModal3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="event-card">
+                        <img src="./img/4.webp" class="card-img-top event-img" alt="Eli Gurung">
+                        <div class="card-body">
+                            <h5 class="card-title">ELI GURUNG</h5>
+                            <h6 class="card-subtitle">DJ</h6>
+                            <p class="card-text">Dance the night away with electrifying beats from the talented DJ Eli
+                                Gurung.</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#portfolioModal4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="event-card">
+                        <img src="./img/5.webp" class="card-img-top event-img" alt="Roselyn Shrestha">
+                        <div class="card-body">
+                            <h5 class="card-title">ROSELYN SHRESTHA</h5>
+                            <h6 class="card-subtitle">Singer</h6>
+                            <p class="card-text">Enjoy the enchanting voice of Roselyn Shrestha in an intimate live
+                                performance.</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#portfolioModal5">View Details</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./img/close-icon.svg" alt="Close modal" /></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-heading">Our Services</h2>
+                <p class="section-subheading">We provide exceptional services to ensure a memorable experience for our
+                    customers</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-cocktail"></i>
+                        </div>
+                        <h4>Premium Drinks</h4>
+                        <p>Choose from our extensive selection of cocktails expertly crafted by our mixologists.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h4>Live Music</h4>
+                        <p>Enjoy live music performances and DJ sets every weekend for a memorable night out.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h4>Lounge Area</h4>
+                        <p>Relax and unwind in our stylish lounge area with comfortable seating and ambient lighting.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                        <h4>Private Parking</h4>
+                        <p>Enjoy convenience with our exclusive private parking available for all guests.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fab fa-amazon-pay"></i>
+                        </div>
+                        <h4>Online Payment</h4>
+                        <p>We accept both cash and various online payment methods for your convenience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h4>Gourmet Food</h4>
+                        <p>Experience the exquisite taste of our carefully curated food menu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-heading">Contact Us</h2>
+                <p class="section-subheading" style="color: #ddd;">For inquiries, reservations, or feedback, feel free
+                    to reach out</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i>Opposite of street-17, Lakeside-6, Pokhara</p>
+                        <p><i class="fas fa-phone"></i> +977 9856076324</p>
+                        <p><i class="fas fa-envelope"></i> anakirestaurant@gmail.com</p>
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="https://www.instagram.com/anaki_bar/" aria-label="Instagram" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/anakirestaurant" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=28.212963703%2C83.95720851"
+                            aria-label="Directions" target="_blank"><i class="fas fa-directions"></i></a>
+                        <a href="https://wa.me/+9779856076324" aria-label="WhatsApp" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-container ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.9732893621284!2d83.95720851!3d28.212963703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDEyJzQ2LjciTiA4M8KwNTcnMjYuMCJF!5e0!3m2!1sen!2snp!4v1620000000000!5m2!1sen!2snp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            target="_blank" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-lg-start">
+                    <p class="mb-0">Copyright &copy; ANAKI 2023-2025</p>
+                </div>
+
+                <div class="col-lg-6 text-lg-end">
+                    Crafted by <a href="https://sait.com.np/">SAIT Solution Nepal </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">EKDEV LIMBU</h2>
-                                    <p class="item-intro text-muted">"SINGER"</p>
-                                    <img class="img-fluid d-block mx-auto" src="./img/1.webp" alt="..." />
-                                    <p></p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong><!--Client:--></strong>
-                                           <!--- Threads-->
-                                        </li>
-                                        <li>
-                                            <strong><!--Category:</strong>
-                                            Illustration-->
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                      <!---  Close Project-->
-                                    </button>
-                                </div>
+                                <h2 class="portfolio-modal-title text-uppercase mb-3">EKDEV LIMBU</h2>
+                                <p class="item-intro text-muted mb-4">Singer</p>
+                                <img class="img-fluid rounded mb-4" src="./img/1.webp" alt="Ekdev Limbu">
+                                <p class="mb-4">Ekdev Limbu is known for his soulful voice and passionate performances.
+                                    We were thrilled to host him at Anaki Bar for an unforgettable night of music and
+                                    entertainment.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./img/close-icon.svg" alt="Close modal" /></div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Creator Meetup</h2>
-                                    <p class="item-intro text-muted">SocialMedia Influencer</p>
-                                    <img class="img-fluid d-block mx-auto" src="./img/2.webp" alt="..." />
-                                    <p></p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong><!--Client:</strong>
-                                            Explore
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
-                                        </li>-->
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
+                                <h2 class="portfolio-modal-title text-uppercase mb-3">CREATOR MEETUP</h2>
+                                <p class="item-intro text-muted mb-4">Social Media Influencers</p>
+                                <img class="img-fluid rounded mb-4" src="./img/2.webp" alt="Creator Meetup">
+                                <p class="mb-4">Our creator meetup brought together some of the most influential social
+                                    media personalities for a night of networking, fun, and collaboration at Anaki Bar.
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Portfolio item 3 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./img/close-icon.svg" alt="Close modal" /></div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Oshin Karki</h2>
-                                    <p class="item-intro text-muted">"Singer"</p>
-                                    <img class="img-fluid d-block mx-auto" src="./img/3.webp" alt="..." />
-                                    <p></p>
-                                    <ul class="list-inline">
-                                       <!--- <li>
-                                            <strong>Client:</strong>
-                                            Finish
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Identity
-                                        </li>-->
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close 
-                                    </button>
-                                </div>
+                                <h2 class="portfolio-modal-title text-uppercase mb-3">OSHIN KARKI</h2>
+                                <p class="item-intro text-muted mb-4">Singer</p>
+                                <img class="img-fluid rounded mb-4" src="./img/3.webp" alt="Oshin Karki">
+                                <p class="mb-4">Oshin Karki captivated our audience with her melodious voice and
+                                    engaging performance, creating an enchanting atmosphere at Anaki Bar.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Portfolio item 4 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./img/close-icon.svg" alt="Close modal" /></div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">ELI GURUNG</h2>
-                                    <p class="item-intro text-muted">DJ</p>
-                                    <img class="img-fluid d-block mx-auto" src="./img/4.webp" alt="..." />
-                                    <p></p>
-                                    <ul class="list-inline">
-                                    <!---  <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Branding
-                                        </li>-->  
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
+                                <h2 class="portfolio-modal-title text-uppercase mb-3">ELI GURUNG</h2>
+                                <p class="item-intro text-muted mb-4">DJ</p>
+                                <img class="img-fluid rounded mb-4" src="./img/4.webp" alt="Eli Gurung">
+                                <p class="mb-4">DJ Eli Gurung set the dance floor on fire with her electrifying beats
+                                    and energetic performance, creating an unforgettable night at Anaki Bar.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Portfolio item 5 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./img/close-icon.svg" alt="Close modal" /></div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">ROSELYN SHRESTHA</h2>
-                                    <p class="item-intro text-muted">"Singer"</p>
-                                    <img class="img-fluid d-block mx-auto" src="./img/5.webp" alt="..." />
-                                    <p></p>
-                                    <ul class="list-inline">
-                                      <!---  <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Website Design
-                                        </li>-->
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
+                                <h2 class="portfolio-modal-title text-uppercase mb-3">ROSELYN SHRESTHA</h2>
+                                <p class="item-intro text-muted mb-4">Singer</p>
+                                <img class="img-fluid rounded mb-4" src="./img/5.webp" alt="Roselyn Shrestha">
+                                <p class="mb-4">Roselyn Shrestha's enchanting voice and mesmerizing performance created
+                                    a magical atmosphere at Anaki Bar, leaving the audience spellbound.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Active nav links
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', function () {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+<script>
+
+    // Get the button element
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    // Show or hide the button based on scroll position
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    // Scroll to top smoothly when the button is clicked
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
 </html>
