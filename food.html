@@ -19,7 +19,7 @@
 
   <style>
     :root {
-      --primary: #9A031E;
+      --primary: #ffa551;
       --secondary: #FB8B24;
       --dark: #0F0E0E;
       --light: #F8F9FA;
@@ -72,6 +72,26 @@
     .navbar-toggler {
       border: none;
       background: transparent;
+    }
+
+    /* Remove dropdown caret */
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+
+    /* Dropdown menu styling */
+    .dropdown-menu {
+      background-color: var(--dark);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .dropdown-item {
+      color: var(--light) !important;
+    }
+    
+    .dropdown-item:hover {
+      background-color: var(--primary);
+      color: white !important;
     }
 
     /* Menu Container */
